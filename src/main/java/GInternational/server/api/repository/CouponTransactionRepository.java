@@ -1,0 +1,17 @@
+package GInternational.server.api.repository;
+
+import GInternational.server.api.entity.CouponTransaction;
+import GInternational.server.api.vo.CouponTransactionEnum;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+public interface CouponTransactionRepository extends JpaRepository<CouponTransaction, Long>, CouponTransactionRepositoryCustom {
+
+    List<CouponTransaction> findByStatusAndCreatedAtBetween(CouponTransactionEnum status, LocalDateTime startDateTime, LocalDateTime endDateTime);
+
+    List<CouponTransaction> findByCreatedAtBetween(LocalDateTime startDateTime, LocalDateTime endDateTime);
+
+    List<CouponTransaction> findByUsernameOrNickname(String username, String nickname);
+}

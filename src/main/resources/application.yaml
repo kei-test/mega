@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: local
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+# mega
+secret:
+  secret-key: DXbj24obRMfWq5urRH0DYoGBrtbZdQ2f
+  ag-code: 6780001
+  ag-token: Yw9qOWb569XLP1ZZudMloDjopMbsxcg2
+
+
+
+
+
+
+
+
+#logging:
+#  level:
+#    root:
